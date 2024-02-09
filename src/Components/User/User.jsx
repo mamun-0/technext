@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
+import { useHistory } from "react-router-dom";
 import "./User.css";
 
 export function User() {
+  const history = useHistory();
   const [user, setUser] = useState(null);
   const API = "https://dummyjson.com/users"; //https://dummyjson.com/users
   useEffect(() => {
@@ -15,8 +17,10 @@ export function User() {
       });
   }, []);
   function handleNewPage(user) {
-    const encodedUser = encodeURIComponent(JSON.stringify(user));
-    window.open(`/${user.id}?user=${encodedUser}`, "_blank");
+    history.push({
+      user,
+      pathname: `/${user.id}`,
+    });
   }
   return user ? (
     <div className="row row-cols-1 row-cols-md-3 g-4 p-0">
