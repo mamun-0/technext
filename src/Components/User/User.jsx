@@ -24,18 +24,33 @@ export function User() {
   }
   return user ? (
     <div className="row row-cols-1 row-cols-md-3 g-4 p-0">
-      {user.map((eachUser) => {
+      {user.map((user) => {
         return (
           <div
-            key={eachUser.id}
+            key={user.id}
             className="col pointer"
             onClick={() => {
-              handleNewPage(eachUser);
+              handleNewPage(user);
             }}
           >
             <div className="card h-100">
               <div className="card-body">
-                <h5 className="card-title">Username : {eachUser.username}</h5>
+                <img src={user.image} className="card-img-top" alt="avatar" />
+                <ul className="list-group list-group-flush">
+                  <li className="list-group-item">
+                    First Name : {user?.firstName}{" "}
+                  </li>
+                  <li className="list-group-item">
+                    Last Name : {user?.lastName}{" "}
+                  </li>
+                  <li className="list-group-item">Email: {user?.email} </li>
+                  <li className="list-group-item">
+                    Address : {user?.address?.address}
+                  </li>
+                  <li className="list-group-item">
+                    City : {user?.address?.city}
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
