@@ -1,13 +1,16 @@
+import { UserForm } from "../UserForm/UserForm";
+
 export function UserCard({
   user,
   searchField,
   handleNewPage,
   handleSearch,
   handleSelect,
+  addNewUser,
 }) {
   return (
     <div>
-      <div className="my-4">
+      <div className="my-4 flex justify-center items-center">
         <div>
           <label htmlFor="sortby" className="mr-2 text-lg">
             Sort By
@@ -32,7 +35,7 @@ export function UserCard({
             </option>
           </select>
         </div>
-        <div>
+        <div className="ml-3">
           <label htmlFor="search" className="text-lg">
             Search :
           </label>
@@ -48,12 +51,13 @@ export function UserCard({
           />
         </div>
       </div>
+      <UserForm user={user} addNewUser={addNewUser} />
       <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
         {user.map((person) => {
           return (
             <div
               key={person.id}
-              className="col cursor-pointer"
+              className="col cursor-pointer hover:bg-sky-700"
               onClick={() => {
                 handleNewPage(person);
               }}

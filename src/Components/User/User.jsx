@@ -7,7 +7,7 @@ export function User() {
   const [user, setUser] = useState([]);
   const [searchField, setSearchField] = useState("");
   const [filterdUser, setFilteredUser] = useState([]);
-  const API = "https://dummyjson.com/users"; //https://dummyjson.com/users
+  const API = "https://dummyjson.com/users";
   useEffect(() => {
     fetch(API)
       .then((res) => res.json())
@@ -51,6 +51,9 @@ export function User() {
       return searchFieldString;
     });
   }
+  function addNewUser(newUser) {
+    setUser(newUser);
+  }
   return user.length ? (
     <div>
       {filterdUser.length ? (
@@ -60,6 +63,7 @@ export function User() {
           handleNewPage={handleNewPage}
           handleSelect={handleSelect}
           handleSearch={handleSearch}
+          addNewUser={addNewUser}
         />
       ) : (
         <UserCard
@@ -68,6 +72,7 @@ export function User() {
           handleNewPage={handleNewPage}
           handleSelect={handleSelect}
           handleSearch={handleSearch}
+          addNewUser={addNewUser}
         />
       )}
     </div>
