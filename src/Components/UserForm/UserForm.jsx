@@ -66,7 +66,7 @@ export function UserForm({ user, addNewUser }) {
   }
   return (
     <div className="mb-4 border border-x-green-400 p-3">
-      <form className="flex">
+      <form className="flex flex-col sm:flex-col md:flex-col lg:flex-row">
         <div className="mb-3">
           <label htmlFor="firstName" className="text-lg">
             First Name :

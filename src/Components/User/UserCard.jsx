@@ -10,7 +10,7 @@ export function UserCard({
 }) {
   return (
     <div>
-      <div className="my-4 flex justify-center items-center">
+      <div className="my-4 flex flex-col sm:flex-col md:flex-col lg:flex-row justify-center items-center">
         <div>
           <label htmlFor="sortby" className="mr-2 text-lg">
             Sort By
