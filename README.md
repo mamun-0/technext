@@ -26,3 +26,8 @@
 - a. Sort by name
 - b. Sort by email
 - c. Sort by Company name
+
+5. Add a form in the user list page where I can add users with all the information mentioned
+   above.
+
+![img1](https://i.imgur.com/oG0S4D4.png)
