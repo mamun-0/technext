@@ -1,8 +1,28 @@
-# React + Vite
+# Task given from technext.it
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+1. Make a user list page where I want to see all the “Users” in a card view.
+   - List all the users in a card layout as the page loads.
+   - Each card will show the following information about the users:
+     - i. Avatar
+     - ii. First Name
+     - iii. Last Name
+     - iv. Email
+     - v. Address (Street, Suite, City)
+     - vi. Company Name
+2. As a user, If I click on a user’s name, it will open a separate page and will show user
+   details with the following information:
 
-Currently, two official plugins are available:
+- a. Avatar
+- b. First Name
+- c. Last Name
+- d. Email
+- e. Address (Street, Suite, City)
+- f. Company Name
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+3. Add a search input field to the top of the list. If I type here, it will search based on the
+   user's name.
+4. Add a select input field to the top of the list to sort the users with the following options:
+
+- a. Sort by name
+- b. Sort by email
+- c. Sort by Company name
